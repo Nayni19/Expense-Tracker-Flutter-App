@@ -86,18 +86,22 @@ class _NewExpenseState extends State<NewExpense> {
                     child: TextField(
                       controller: _titleController,
                       maxLength: 50,
+                      style: const TextStyle(color: Colors.black),
                       decoration: const InputDecoration(label: Text('Title')),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 24,
                   ),
                   Expanded(
                     child: TextField(
                       controller: _amountController,
                       keyboardType: TextInputType.number,
+                      style: const TextStyle(color: Colors.black),
                       decoration: const InputDecoration(
-                          prefixText: 'Rs ', label: Text('Amount')),
+                        prefixText: 'Rs ',
+                        label: Text('Amount'),
+                      ),
                     ),
                   ),
                 ],
@@ -105,6 +109,7 @@ class _NewExpenseState extends State<NewExpense> {
             else
               TextField(
                 controller: _titleController,
+                style: const TextStyle(color: Colors.black),
                 maxLength: 50,
                 decoration: const InputDecoration(label: Text('Title')),
               ),
@@ -153,6 +158,7 @@ class _NewExpenseState extends State<NewExpense> {
                     child: TextField(
                       controller: _amountController,
                       keyboardType: TextInputType.number,
+                      style: const TextStyle(color: Colors.black),
                       decoration: const InputDecoration(
                           prefixText: 'Rs ', label: Text('Amount')),
                     ),
@@ -183,7 +189,7 @@ class _NewExpenseState extends State<NewExpense> {
                   ElevatedButton(
                       onPressed: () => Navigator.pop(context),
                       child: const Text("Cancel")),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   ElevatedButton(
@@ -219,7 +225,7 @@ class _NewExpenseState extends State<NewExpense> {
                   ElevatedButton(
                       onPressed: () => Navigator.pop(context),
                       child: const Text("Cancel")),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   ElevatedButton(
